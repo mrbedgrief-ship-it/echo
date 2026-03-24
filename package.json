@@ -1,0 +1,16 @@
+{
+  "name": "echo-desktop-messenger",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["desktop", "server", "shared"],
+  "scripts": {
+    "dev": "concurrently -n server,desktop \"npm run dev -w server\" \"npm run dev -w desktop\"",
+    "build": "npm run build -w server && npm run build -w desktop",
+    "dist": "npm run dist -w desktop",
+    "prisma:migrate": "npm run prisma:migrate -w server",
+    "prisma:seed": "npm run prisma:seed -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
