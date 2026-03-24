@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body {
+  @apply bg-[#070a12] text-slate-100 antialiased;
+  background-image:
+    radial-gradient(1000px 700px at 10% -10%, rgba(137,121,255,.18), transparent),
+    radial-gradient(700px 500px at 90% 100%, rgba(76,189,255,.10), transparent);
+}
+
+* { scrollbar-width: thin; scrollbar-color: #2e3650 transparent; }
+
+.card-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.1);
+  backdrop-filter: blur(10px);
+}
